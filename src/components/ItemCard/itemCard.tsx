@@ -10,8 +10,8 @@ type cardInfo = {
 
 export const ItemCard  = ({name, price, info, image}: cardInfo) => 
     <div className='card'>
-        <h1>{name}</h1>
-        <p>{'$' + price}</p>
-        <p>{'info:' + info}</p>
-        <p>{'image:' + image}</p>
+        <h1 className='name'>{name}</h1>
+        <p className='image'>{'image:' + image}</p>
+        <p className='price'>{'$' + price}</p>
+        <p className='info'>{'info:' + info}</p>
     </div>
