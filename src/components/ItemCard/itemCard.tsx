@@ -1,6 +1,8 @@
 import React from 'react'
 import './itemCard.scss'
 
+import conImage from './PS2.jpg'
+
 type cardInfo = {
     name: string,
     price: number,
@@ -11,7 +13,7 @@ type cardInfo = {
 export const ItemCard  = ({name, price, info, image}: cardInfo) => 
     <div className='card'>
         <h1 className='name'>{name}</h1>
-        <p className='image'>{'image:' + image}</p>
-        <p className='price'>{'$' + price}</p>
-        <p className='info'>{'info:' + info}</p>
+        <img className='img' src={conImage} alt='image'/>
+        <h3 className='price'>{'$' + price}</h3>
+        <p className='infoHide'>{info}</p>
     </div>
