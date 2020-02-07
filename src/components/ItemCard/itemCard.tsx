@@ -12,8 +12,12 @@ type cardInfo = {
 
 export const ItemCard  = ({name, price, info, image}: cardInfo) => 
     <div className='card'>
-        <h1 className='name'>{name}</h1>
-        <img className='img' src={conImage} alt='image'/>
-        <h3 className='price'>{'$' + price}</h3>
-        <p className='infoHide'>{info}</p>
+        <div className='infoDisplay'>
+            <div>
+                <h1 className='name'>{name}</h1>
+                <img className='img' src={conImage} alt='image'/>
+                <h3 className='price'>{'$' + price}</h3>
+            </div>
+            <p className='infoShow'>{info}</p>
+        </div> 
     </div>
